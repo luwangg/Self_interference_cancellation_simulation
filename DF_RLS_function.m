@@ -4,4 +4,3 @@ function [A,P] = DF_RLS_function(A,r_r,r_t,P)
     P = (1/lambda)*(P-((K*K')/(lambda+K'*r_t)));
     A = A-r_r*r_t'*P;
 end
-
