@@ -1,6 +1,6 @@
-function [A,P] = DF_RLS_function(A,r_r,r_t,P)
+function [a_RLS,P] = DF_RLS_function(a_RLS,y_RLS,x,P)
     lambda = 0.9999; % Forgetting factor
-    K = P*r_t;
-    P = (1/lambda)*(P-((K*K')/(lambda+K'*r_t)));
-    A = A-r_r*r_t'*P;
+    K = P*x;
+    P = (1/lambda)*(P-((K*K')/(lambda+K'*x)));
+    a_RLS = a_RLS + y_RLS*P.'*conj(x);
 end
