@@ -1,7 +1,7 @@
 close all;clear;clc;j=1i;
 %% Parameters
 N = 1e3; % Total TX symbol number (Iteration number)
-Trial = 1000; % Trial number
+Trial = 1e3; % Trial number
 %% Initial Parameters
 % Channel Norm error
 Psi_a_norm_error_average_SGD = zeros(N,1);
